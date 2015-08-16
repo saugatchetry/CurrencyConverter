@@ -35,7 +35,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     CurrencyFragment cf;
     String sourceCurrency = "USD";
     String targetCurrency = "INR";
-    String url = "https://openexchangerates.org/api/latest.json?app_id=f62c5d4e009f49e0b3ea91c2c3801cd6";
+    String appId = "YOUR API KEY HERE";
+    String url = "https://openexchangerates.org/api/latest.json?"+appId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
