@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_login"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:id="@+id/inputPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:background="@color/white"
+            android:hint="Enter amount"
+            android:padding="10dp"
+            android:ems="10"
+            android:gravity="start"
+            android:textColor="@color/input_login"
+            android:textColorHint="@color/input_login_hint"
+            android:id="@+id/inputValue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/inputPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"
+            android:id="@+id/btnSourceCurrency" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_swap_36dp"
+            android:id="@+id/btnSwapCurrency"
+            android:text="&lt;->" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EUR"
+            android:id="@+id/btnTargetCurrency"
+            android:singleLine="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:id="@+id/convertButtonPanel"
+        android:layout_below="@+id/buttonPanel"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:id="@+id/btnConvertCurrency" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/answerPanel"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_below="@+id/convertButtonPanel">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="@color/white"
+            android:id="@+id/convertedValue" />
+    </LinearLayout>
+
+
+</RelativeLayout>
